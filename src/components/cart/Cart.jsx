@@ -29,7 +29,7 @@ export default function Cart() {
 
 
             <div className={`fixed bg-white transition-transform duration-1000 bottom-0 h-full size-100 py-10 ${openmenu ? '' : 'translate-full'}`}>
-                <div className='flex justify-end px-5'>
+                <div className='flex justify-end px-10'>
                     <button className='bg-red-600 p-2' onClick={() => setOpenMenu(prev => !prev)}><IoMdClose color='white' /></button>
                 </div>
                 <h1 className='text-center font-bold text-red-600'>Cart Content</h1>
