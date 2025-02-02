@@ -17,7 +17,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category/meals/:id" element={<Categorymeal />} />
+            <Route path="/category/meals/:id/:title" element={<Categorymeal />} />
           </Routes>
         </BrowserRouter>
       </QueryClientProvider>

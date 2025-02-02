@@ -5,6 +5,7 @@ import axios from 'axios'
 import { useQuery } from '@tanstack/react-query'
 import { useDispatch, useSelector } from 'react-redux';
 import { add_to_cart } from '../../redux/cartReducer';
+import { config } from '../../config/config';
 
 
 export default function Meal() {
@@ -16,7 +17,7 @@ export default function Meal() {
   const { data, isLoading } = useQuery({
     queryKey: ['meals'],
     queryFn: async () => {
-      const res = await axios.get('https://resturant-menu.onrender.com/api/show/meals');
+      const res = await axios.get(`${config.url}/api/show/meals`);
       return res.data;
     },
   });
@@ -47,7 +48,7 @@ export default function Meal() {
       title: item.title,
       price: item.price,
       quantity: quantities[item._id] || 1,
-      image: `https://resturant-menu.onrender.com/uploads/${item.image}`
+      image: `${config.url}/uploads/${item.image}`
     }));
   };
 
@@ -67,7 +68,7 @@ export default function Meal() {
             increament={() => handleIncrement(item._id)}
             decreament={() => handleDecrement(item._id)}
             addtocart={() => handleAddToCart(item)}
-            image={`https://resturant-menu.onrender.com/uploads/${item.image}`} />)}
+            image={`${config.url}/uploads/${item.image}`} />)}
 
 
       </div>
