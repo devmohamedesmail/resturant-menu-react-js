@@ -18,7 +18,7 @@ export default function Category() {
 
     return (
         <div className='mb-10'>
-            <h1 className='text-center font-bold text-red-600 mb-10 text-2xl'>Our Categories</h1>
+            <h1 className='text-center font-bold text-red-600 mb-10 '>Our Categories</h1>
             <div className='grid grid-cols-3 md:grid-cols-4 gap-3'>
                 {data?.map((item) => 
                 <Link key={item._id} to={`/category/meals/${item._id}`} state={{ item }}>

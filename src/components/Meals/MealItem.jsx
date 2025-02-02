@@ -9,8 +9,8 @@ import CustomAddToCart from '../../custom/CustomAddToCart';
 
 export default function MealItem({image,title,price,quantity,increament,decreament,addtocart}) {
   return (
-    <div className='shadow-lg rounded-2xl'>
-      <img src={image} alt="" className='w-full h-56' />
+    <div className='shadow-lg rounded-2xl mb-2'>
+      <img src={image} alt="" className='w-full h-48 rounded-2xl' />
       <div className='p-2'>
         <h2 className='text-center'>{title}</h2>
         <h2 className='text-center text-red-700 font-bold'>{price} </h2>

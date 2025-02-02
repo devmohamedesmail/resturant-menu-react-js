@@ -52,9 +52,9 @@ export default function Meal() {
   };
 
   return (
-    <div>
+    <div className='mb-30'>
       <h1 className='text-center font-bold text-red-600 mb-10'>Our Meals</h1>
-      <div className='grid grid-cols-2 md:grid-cols-4 gap-3'>
+      <div className='grid grid-cols-2 md:grid-cols-4 gap-1'>
 
 
 
