@@ -72,13 +72,13 @@ export default function Categorymeal() {
     return (
         <Fragment>
             <div className='container m-auto py-5 px-5'>
-                <button className='bg-red-600 p-2 rounded-full' onClick={()=>navigation(-1)}>
+                <button className='bg-yellow-600 p-2 rounded-full' onClick={()=>navigation(-1)}>
                     <IoMdArrowBack color='white' />
                 </button>
             </div>
             <div className='container m-auto px-2 mb-20'>
 
-                <h1 className="text-center font-bold text-red-600 mb-10 text-2xl">{title}</h1>
+                <h1 className="text-center font-bold text-yellow-600 mb-10 text-2xl">{title}</h1>
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-1">
                     {filteredMeals.length > 0 ? (
                         filteredMeals.map((item) => (
