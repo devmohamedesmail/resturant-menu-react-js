@@ -16,12 +16,12 @@ export default function Cart() {
     const [openmenu, setOpenMenu] = useState(false)
     return (
         <Fragment>
-            <div className='fixed bottom-0 bg-gray-100 w-full h-18'>
+            <div className='fixed bottom-0 bg-black border-t border-white w-full h-18'>
                 <div className='flex justify-between items-center h-18 flex-wrap px-10'>
                     <div className='bg-yellow-600 text-white py-1 px-3 rounded'> {totalPrice} : Total</div>
 
                     <button className='relative' onClick={() => setOpenMenu(prev => !prev)}>
-                        <GiShoppingCart size={30} />
+                        <GiShoppingCart size={30} color='white' />
                         <span className='absolute -top-3 -right-3 bg-yellow-600 w-5 h-5  flex justify-center items-center text-xs  rounded-full text-white'>{cart.length}</span>
                     </button>
                 </div>
