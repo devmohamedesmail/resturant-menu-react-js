@@ -1,4 +1,4 @@
-import React, { Fragment, useEffect, useState } from 'react'
+import React, { Fragment, useContext, useEffect, useState } from 'react'
 import { useNavigate, useParams } from 'react-router-dom'
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
@@ -8,6 +8,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { add_to_cart } from '../redux/cartReducer';
 import { config } from '../config/config';
 import { IoMdArrowBack } from "react-icons/io";
+import IDContext from '../context/DataProvider';
 
 export default function Categorymeal() {
     const { id, title } = useParams()
@@ -15,6 +16,8 @@ export default function Categorymeal() {
     const [filteredMeals, setFilteredMeals] = useState([]);
     const dispatch = useDispatch();
     const navigation  = useNavigate()
+    const {tableID,setTableID} = useContext(IDContext)
+    console.log(tableID)
 
     // Fetch all meals (reusing the query)
     const { data: meals, isLoading } = useQuery({

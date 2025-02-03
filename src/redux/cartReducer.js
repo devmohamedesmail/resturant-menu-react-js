@@ -15,12 +15,34 @@ export const cartSlice = createSlice({
       } else {
         state.meals.push(action.payload); // Add new item to cart
       }
+    },
+
+
+    remove_from_cart: (state, action) => {
+      state.meals = state.meals.filter((item) => item.id !== action.payload);
+    },
+    increase_quantity: (state, action) => {
+      const item = state.meals.find(item => item.id === action.payload);
+      if (item) {
+        item.quantity += 1;
+      }
+    },
+    decrease_quantity: (state, action) => {
+      const item = state.meals.find(item => item.id === action.payload);
+      if (item && item.quantity > 1) {
+        item.quantity -= 1;
+      } else {
+        state.meals = state.meals.filter((item) => item.id !== action.payload); // Remove item if quantity reaches 0
+      }
+    },
+    reset_cart: (state) => {
+      state.meals = [];
     }
   
   },
 })
 
 
-export const { add_to_cart } = cartSlice.actions
+export const { add_to_cart, remove_from_cart ,increase_quantity, decrease_quantity,reset_cart} = cartSlice.actions
 
 export default cartSlice.reducer

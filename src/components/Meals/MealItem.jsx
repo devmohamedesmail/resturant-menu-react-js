@@ -7,12 +7,13 @@ import CustomAddToCart from '../../custom/CustomAddToCart';
 
 
 
-export default function MealItem({image,title,price,quantity,increament,decreament,addtocart}) {
+export default function MealItem({image,title,price,quantity,increament,decreament,addtocart,description}) {
   return (
     <div className='shadow-lg bg-white rounded-2xl mb-2'>
       <img src={image} alt="" className='w-full h-48 rounded-2xl' />
       <div className='p-2'>
         <h2 className='text-center'>{title}</h2>
+        <h2 className='text-center'>{description}</h2>
         <h2 className='text-center text-yellow-700 font-bold'>{price} </h2>
       </div>
       <div className='p-2 flex items-center justify-between'>

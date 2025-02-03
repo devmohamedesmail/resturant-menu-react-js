@@ -63,6 +63,7 @@ export default function Meal() {
           <MealItem
             key={item._id}
             title={item.title}
+            description={item.description}
             price={item.price}
             quantity={quantities[item._id] || 1}
             increament={() => handleIncrement(item._id)}
