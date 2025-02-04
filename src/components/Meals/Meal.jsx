@@ -6,6 +6,7 @@ import { useQuery } from '@tanstack/react-query'
 import { useDispatch, useSelector } from 'react-redux';
 import { add_to_cart } from '../../redux/cartReducer';
 import { config } from '../../config/config';
+import CustomSpinner from '../../custom/CustomSpinner';
 
 
 export default function Meal() {
@@ -51,6 +52,12 @@ export default function Meal() {
       image: `${config.url}/uploads/${item.image}`
     }));
   };
+
+
+
+  if (isLoading) return <CustomSpinner />
+
+
 
   return (
     <div className='mb-30 container m-auto'>

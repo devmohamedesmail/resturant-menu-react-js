@@ -3,6 +3,7 @@ import CategoryItem from './CategoryItem'
 import { useQuery } from '@tanstack/react-query'
 import axios from 'axios'
 import { config } from '../../config/config'
+import CustomSpinner from '../../custom/CustomSpinner'
 
 
 export default function Category() {
@@ -17,7 +18,7 @@ export default function Category() {
 
        
     
-        if (isLoading) return "dfsdf"
+        if (isLoading) return <CustomSpinner />
 
     return (
         <div className='mb-10'>
@@ -25,6 +26,7 @@ export default function Category() {
             <div className='grid grid-cols-3 md:grid-cols-4 gap-1'>
                 {data?.map((item) =>
                     <CategoryItem
+                        key={item._id}
                         link={`/category/meals/${item._id}/${encodeURIComponent(item.title)}`}
                         title={item.title}
                         image={`${config.url}/uploads/${item.image}`}
