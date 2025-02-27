@@ -10,20 +10,20 @@ import { DataProvider } from './context/DataProvider'
 const queryClient = new QueryClient()
 function App() {
 
- 
+
   return (
     <>
 
       <QueryClientProvider client={queryClient}>
         <DataProvider>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/:id?" element={<Home />} />
-            <Route path="/category/meals/:id/:title" element={<Categorymeal />} />
-          </Routes>
-        </BrowserRouter>
+          <BrowserRouter>
+            <Routes>
+              <Route path="/:id?" element={<Home />} />
+              <Route path="/category/meals/:id/:title" element={<Categorymeal />} />
+            </Routes>
+          </BrowserRouter>
         </DataProvider>
-       
+
       </QueryClientProvider>
     </>
 

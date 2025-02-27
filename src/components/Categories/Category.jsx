@@ -23,7 +23,7 @@ export default function Category() {
     return (
         <div className='mb-10'>
             <h1 className='text-center font-bold text-yellow-600 text-2xl mb-10 '>Our Categories</h1>
-            <div className='grid grid-cols-3 md:grid-cols-4 gap-1'>
+            <div className='grid grid-cols-4 md:grid-cols-4 gap-1'>
                 {data?.map((item) =>
                     <CategoryItem
                         key={item._id}

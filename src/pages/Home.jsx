@@ -6,6 +6,9 @@ import Header from '../components/Header/Header'
 import { useSelector } from 'react-redux'
 import { useParams } from "react-router-dom";
 import IDContext from '../context/DataProvider'
+import Banner from '../components/Banner/Banner'
+
+import BottomNavbar from '../components/Bottomnavbar/BottomNavbar'
 
 
 
@@ -23,8 +26,10 @@ export default function Home() {
     <div>
       <Header />
       <Category />
+       <Banner />
       <Meal />
-      <Cart id={id} />
+      {/* <Cart id={id} /> */}
+      <BottomNavbar />
     </div>
   )
 }

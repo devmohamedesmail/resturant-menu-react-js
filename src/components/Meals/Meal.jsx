@@ -61,7 +61,7 @@ export default function Meal() {
 
   return (
     <div className='mb-30 container m-auto'>
-      <h1 className='text-center font-bold mb-10 text-2xl text-yellow-600'>Our Meals</h1>
+      <h1 className='text-center font-bold mb-10 text-2xl text-yellow-600'>Our Meals 🔥</h1>
       <div className='grid grid-cols-2 md:grid-cols-6 gap-1 px-2'>
 
 
